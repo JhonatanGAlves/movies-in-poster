@@ -1,5 +1,4 @@
-
-/* HEADER */
+/* -----------HEADER---------- */
 .container-header {
   display: flex;
   justify-content: center;
@@ -78,4 +77,36 @@
 .menu-header .menu-dropdown ul li a {
   color: #343434;
   text-transform: uppercase;
+}
+
+/* -------------BANNER------------- */
+.container-movies {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 50px;
+  width: 1450px;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #373737;
+}
+
+h3 {
+  margin: 20px 0 30px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+
+  color: #363636;
+}
+
+img {
+  margin: 25px;
+  width: 300px;
+  border-radius: 10px;
 }
