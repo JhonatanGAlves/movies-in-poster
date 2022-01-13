@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
-import SpiderMan from '../assets/images/spider-man.webp'
-import JuntosEnrolados from '../assets/images/juntos-e-enrolados-poster-1.jpg'
-import Panico from '../assets/images/Panico-2.jpg'
 
 type Movie = {
   titulo: string,
