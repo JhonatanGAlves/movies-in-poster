@@ -1,0 +1,15 @@
+.container-search {
+  border: 1px solid #FFF;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  outline: 0;
+  padding: 10px;
+}
+
+span {
+  position: sticky;
+  padding: 0 7px;
+}
