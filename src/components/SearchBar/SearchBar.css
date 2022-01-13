@@ -1,15 +1,27 @@
 .container-search {
-  border: 1px solid #FFF;
+  display: flex;
+  margin-left: auto;
+  width: 350px;
+  background-color: #FFF;
+  border: 1px solid transparent;
   border-radius: 5px;
 }
 
 input {
+  width: 280px;
+  align-items: center;
+  height: 25px;
   border: none;
   outline: 0;
   padding: 10px;
 }
 
-span {
-  position: sticky;
-  padding: 0 7px;
+span.btn-clear {
+  margin: auto;
+  width: auto;
+  cursor: default ;
+
+  font-size: 13px;
+  font-weight: 300;
+  color: #373737;
 }

@@ -1,8 +1,9 @@
-import React, { useState, useEffect, ChangeEventHandler } from 'react'
+import React, { useState } from 'react'
 import './SearchBar.css'
 
 type SearchProps = {
   placeholder: string,
+  className?: string
 }
 
 type Movie = {
@@ -13,33 +14,40 @@ type Movie = {
 const SearchBar = (props: SearchProps) => {
   const [searchMovie, setSearchMovie] = useState<Movie[]>([])
   const [value, setValue] = useState('')
-  const [clearEsc, setClearEsc] = useState(false)
+  let hideClose = true
 
-  useEffect(() => {
-    if (value) {
-      setClearEsc(clearEsc)
-    }
-  }, [value, clearEsc])
+  if (value != '' && value != null) {
+    hideClose = false
+  }
 
-  const changeMovie = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
   }
 
+  const onKeyUp = (e: any) => {
+    if (e.keyCode === 27) {
+      setValue('')
+    }
+  }
+
+  const onClickClear = () => {
+    setValue('')
+  }
+
   return (
-    <div className='container-search'>
+    <span className='container-search'>
       <input
         type='text'
+        className={props.className}
         placeholder={props.placeholder}
         value={value}
-        onChange={changeMovie}
+        onKeyUp={onKeyUp}
+        onChange={handleChange}
       />
-      {clearEsc ?
-        (<span>
-          (esc) <strong>x</strong>
-        </span>) :
-        ('')
-      }
-    </div>
+      <span className='btn-clear' onClick={onClickClear}>
+        {!hideClose ? '(esc) x' : null}
+      </span>
+    </span>
   )
 }
 
