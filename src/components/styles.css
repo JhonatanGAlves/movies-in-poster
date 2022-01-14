@@ -110,3 +110,45 @@ img {
   width: 300px;
   border-radius: 10px;
 }
+
+/*-------FOOTER-------*/
+.container-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  width: 100%;
+
+  background-color: #373737;
+}
+
+.box-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1450px;
+  max-width: 1450px;
+  padding: 100px 0;
+}
+
+.text-footer .quote-footer {
+  color: #FFF;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: start;
+  font-style: italic;
+  margin: 0;
+}
+
+.rights-reserved-footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-top: 250px;
+  color: #FFF;
+}
+
+.text-footer p {
+  color: #6b6b6b;
+  text-align: end;
+  margin: 5px;
+}
