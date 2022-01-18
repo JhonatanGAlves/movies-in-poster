@@ -3,7 +3,8 @@ import './SearchBar.css'
 
 type SearchProps = {
   placeholder: string,
-  className?: string
+  className?: string,
+  value?: string
 }
 
 type Movie = {
@@ -40,7 +41,7 @@ const SearchBar = (props: SearchProps) => {
         type='text'
         className={props.className}
         placeholder={props.placeholder}
-        value={value}
+        value={props.value || value}
         onKeyUp={onKeyUp}
         onChange={handleChange}
       />
